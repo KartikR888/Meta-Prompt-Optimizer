@@ -1,0 +1,47 @@
+Act as a Principal Frontend Engineer and UI/UX Designer. Build a complete, production-ready, client-side web application titled "Meta-Prompt Optimizer: Self-Refining Prompt Compiler".
+
+### Technical Architecture & Delivery Format
+Provide the source code cleanly divided into three distinct files:
+1. `index.html`: Modern semantic HTML5 skeleton loading React 18 and Babel standalone via official CDNs, referencing `styles.css` and `app.jsx`.
+2. `styles.css`: Pure modern CSS (or Tailwind via CDN) featuring an engineering-grade dark theme (slate/zinc palette, subtle borders, high-contrast monospace outputs, copy-to-clipboard tooltips, clean loading spinners, and fluid grid layouts).
+3. `app.jsx`: Fully modular React 18 single-page application executed via Babel, with zero page reloads, reactive state updates, and interactive mock/live compilation modes.
+
+---
+
+### Core UI/UX Requirements
+1. **Header & Status Bar:**
+   - App title, compiler version badge (`v2.4-deterministic`), and a Toggle for "Simulation Mode" (instant mock compiling with prebuilt realistic templates) vs. "Custom API Mode" (input field for user's OpenAI/Anthropic/Gemini API key).
+
+2. **Left Panel: Input & Compilation Flags:**
+   - **Textarea:** "Raw Intent / Rough Prompt" (e.g., "Write an email firing a client politely").
+   - **Optimization Target Dropdown:** Select between `Production Agent / Tool Use`, `Structured JSON Extraction`, `Creative Direction`, or `Academic Research`.
+   - **Optimization Flags (Checkboxes):** 
+     - [x] Inject Strict XML Delimiters
+     - [x] Enforce Negative Constraints (Anti-Hallucination)
+     - [x] Parameterize Inputs (`{{variables}}`)
+     - [x] Include Chain-of-Thought Reasoning Block
+   - **Action Button:** "Compile Prompt" with an active loading state.
+
+3. **Right Panel: Compiler Output & Diagnostic Terminal:**
+   - **Tabbed Interface:**
+     - **Tab 1: Compiled System Prompt:** Clean syntax-highlighted or monospace view with an instantaneous "Copy Prompt" button.
+     - **Tab 2: Compiler Diagnostics (Audit Log):** Displays a simulated pass/fail linting matrix:
+       - Ambiguity Score (% reduction)
+       - Detected Variables list
+       - Edge-Case Guardrails injected
+     - **Tab 3: Test Run Sandbox:** Allows the user to fill the detected `{{variables}}` and view mock output without leaving or refreshing the page.
+
+4. **Interactive Simulation Engine (in `app.jsx`):**
+   - Provide a built-in deterministic heuristic compiler function in pure JavaScript so the app functions immediately out-of-the-box without requiring an API key. 
+   - When "Compile Prompt" is clicked:
+     - Trigger a 700ms loading state.
+     - Parse the input string, extract candidate keywords into `{{variables}}`.
+     - Construct a high-grade prompt template with `<system_role>`, `<task_boundaries>`, `<input_schema>`, and `<output_format>`.
+     - Update the state and switch directly to the compiled view without any page reload.
+
+---
+
+### Implementation Details:
+- All event handlers must prevent default form submissions (`e.preventDefault()`).
+- Responsive across desktop and tablet split screens.
+- Provide the complete, unabridged code for each of the three files without placeholders or omitted sections.
