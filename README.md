@@ -2,6 +2,12 @@
 
 A client-side web app that turns a rough, one-line intent into a structured, production-style system prompt. It runs entirely in the browser with React 18 and Babel standalone, so there is no build step, no backend, and no page reloads.
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+</p>
+
 **Version:** `v2.4-deterministic`
 
 ## Description
